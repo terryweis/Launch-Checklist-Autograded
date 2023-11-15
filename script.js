@@ -20,19 +20,23 @@ window.addEventListener("load", function() {
 
     
      //form info to process into the validation fuction(s)
-    let list = document.getElementByID("faultyItems")
-    let pilot = document.querySelector("input[name=pilotName]")
-    let copilot = document.querySelector("input[name=copilotName]")
-    let fuelLevel = Number((document.querySelector("input[name=fuelLevel]")))
-    let cargoLevel = Number((document.querySelector("input[name=cargoMass]")))
+    // let list = document.getElementById("faultyItems")
+    // let pilot = document.querySelector("input[name=pilotName]")
+    // let copilot = document.querySelector("input[name=copilotName]")
+    // let fuelLevel = Number((document.querySelector("input[name=fuelLevel]")))
+    // let cargoLevel = Number((document.querySelector("input[name=cargoMass]")))
     
     // This allows the page to listen for the submit button
 
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event){
-  
-// console.log(list,pilot,copilot,fuelLevel,cargoLevel)
-   formSubmission(document,list,pilot,copilot,fuelLevel,cargoLevel);
+        let list = document.getElementById("faultyItems")
+        let pilot = document.querySelector("input[name=pilotName]")
+        let copilot = document.querySelector("input[name=copilotName]")
+        let fuelLevel = (document.querySelector("input[name=fuelLevel]"))
+        let cargoLevel = (document.querySelector("input[name=cargoMass]"))
+ console.log(list,pilot,copilot,fuelLevel,cargoLevel)
+   formSubmission(document,list,pilot.value,copilot.value,fuelLevel.value,cargoLevel.value);
    event.preventDefault();
     });
     
