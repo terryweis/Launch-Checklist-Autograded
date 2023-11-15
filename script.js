@@ -18,18 +18,13 @@ window.addEventListener("load", function() {
        addDestinationInfo(document,planet.name,planet.diameter,planet.star,planet.distance,planet.moons,planet.image);       
     })
 
-    
-     //form info to process into the validation fuction(s)
-    // let list = document.getElementById("faultyItems")
-    // let pilot = document.querySelector("input[name=pilotName]")
-    // let copilot = document.querySelector("input[name=copilotName]")
-    // let fuelLevel = Number((document.querySelector("input[name=fuelLevel]")))
-    // let cargoLevel = Number((document.querySelector("input[name=cargoMass]")))
-    
-    // This allows the page to listen for the submit button
+// This allows the page to listen for the submit button
 
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event){
+
+//form info to process into the validation fuction(s)
+
         let list = document.getElementById("faultyItems")
         let pilot = document.querySelector("input[name=pilotName]")
         let copilot = document.querySelector("input[name=copilotName]")
